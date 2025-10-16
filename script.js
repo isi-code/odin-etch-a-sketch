@@ -36,9 +36,19 @@ document.body.appendChild(gridContainer);
 gridContainer.addEventListener("mouseover", (e) => {
     if (e.target.className === "grid"){
         if(e.target.style.backgroundColor === ""){
-            e.target.style.backgroundColor = "blue"; 
+            e.target.style.backgroundColor = `rgb(${getRandomRGB()})`; 
         } else{
             e.target.style.backgroundColor = ""; 
         }
     }
 });
+
+function getRandomRGB(){
+    let values = [];
+
+    for (let i= 0; i < 3; ++i){
+       values.push(Math.floor(Math.random() * 255));
+    }
+
+    return values.join(",")
+}
