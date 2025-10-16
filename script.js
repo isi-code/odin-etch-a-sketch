@@ -14,12 +14,18 @@ button.addEventListener("click", () => {
         })
     }
 
-    for (let g = 0; g < number; ++g) {
-        let div = document.createElement("div");
-        div.setAttribute("class","grid");
-        gridContainer.appendChild(div);
+    if (number <= 100) {
+        for (let g = 0; g < (number * number); ++g) {
+            let div = document.createElement("div");
+            div.setAttribute("class",'grid')
+            div.style.flex = `1 1 ${100/number}%`;
+            gridContainer.appendChild(div);
+        }          
+    } else {
+        alert("Limit is 100")
+        gridContainer.setAttribute("class","");
+        
     }
-
 })
 
 const gridContainer = document.createElement("div");
