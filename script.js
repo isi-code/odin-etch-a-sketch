@@ -6,6 +6,13 @@ document.body.appendChild(button);
 button.addEventListener("click", () => {
 
     let number = parseInt(prompt("Grid Number: "));
+    let containerContent = document.querySelectorAll(".container div")
+
+    if (containerContent.length > 0) {
+        [...containerContent].forEach((div)=>{
+            gridContainer.removeChild(div);
+        })
+    }
 
     for (let g = 0; g < number; ++g) {
         let div = document.createElement("div");
