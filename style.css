@@ -4,13 +4,20 @@
     margin:0;
 }
 
-.container{
-    display:flex;
-    flex-flow:row wrap;
-    height: 100vh;
+body > button{
+    display: block;
+    margin: 1rem auto;
+    padding: 10px;
 }
 
-.grid{
-    border:1px solid black;  
-    flex:1 1 25%;
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 85%;
+  height: 90vh;
+  margin: auto;
+}
+
+.container > div {
+  border: 1px solid black;
 }
